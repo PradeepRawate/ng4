@@ -1,0 +1,27 @@
+.md-pic { 
+    /* The image used */
+    background-image:url('../../assets/fb-img.jpg');
+    /* Full height */
+    height: 873px; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.md-pic:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.caption-text {
+    position: relative;
+    color: #fff;
+}
