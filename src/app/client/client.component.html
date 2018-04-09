@@ -1,0 +1,9 @@
+Child ...<div>
+  Input from Parent : {{childMessage.status}} <br>
+  <div class="btn btn-primary" (click)="sendSignal()">Send</div> Data to Parent: {{message}}
+</div><br>
+Data from HTTP get Call : 
+<div *ngFor="let emp of data">
+  Id: {{emp.id}}
+  Name: {{emp.name}} 
+</div>

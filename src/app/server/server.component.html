@@ -1,0 +1,16 @@
+<!-- <div [ngStyle]="{backgroundColor: getColor()}"> -->
+<div [ngClass]="(status === 'Online') ? 'online' : 'offline'">
+    <p>Parent ...</p>  
+    Employee with Id {{ empId }} is {{ getEmployeeName() }}
+    <button class="btn btn-primary" [disabled]="!btnVisibility" (click)="onClick()">Change Status</button>
+
+    <p *ngIf="status == 'Online';else other">Server is Online</p>
+    <ng-template #other style="display: flex;">
+        <p>Server is Offline</p>
+    </ng-template>
+    <p [hidden]="!signalFromChild">Status changed from child...</p>
+
+</div>
+<app-client (signal)="getSignal($event)" [childMessage]="myObject"></app-client>
+<!-- <div [innerText]="status"></div>
+<input type="text" [(ngModel)]="status"> -->

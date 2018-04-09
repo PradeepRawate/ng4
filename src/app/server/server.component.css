@@ -1,0 +1,7 @@
+.online {
+    background-color: lightgreen;
+}
+
+.offline {
+    background-color: rgb(243, 136, 136);
+}
