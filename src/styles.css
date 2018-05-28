@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+html, 
+body {
+    height:100%;
+    background: #edeff0;
+}
+
+footer {
+    bottom:0;
+    position: relative;
+    padding: 0 2rem 0 2rem;
+}
+
+.md-theme {
+    background-color: #099 !important;
+}
+
+.btn-primary {
+    background-color: #099 !important;
+    border-color: #099 !important;
+}
+
+.ms-container {
+    width: 100%;
+    padding: 1.5rem 1rem 0rem 2rem;
+    height: 100%;
+    min-height: 700px;
+}
+
+.caption-text {
+    position: relative;
+    color: #fff;
+}
+
+.caption-bg {
+    background: #0002026b;
+}
+
+.text-thin {
+    font-weight: lighter;
+    font-size: .9rem;
+}
+
+.footer-text {
+    font-weight: bold;
+    font-size: .9rem;
+    color: grey;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px;
+}

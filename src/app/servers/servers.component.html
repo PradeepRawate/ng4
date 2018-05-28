@@ -1,2 +1,71 @@
-<div class='app-server'></div>
-<div class='app-server'></div>
+<div class="ms-container">
+    <div class='app-server'></div>
+    <div>
+        <div class="config-container">
+            <h3>
+              <strong>Configurations</strong>
+              <!-- <span>
+                <button class="pull-right astext" (click)="addConfiguration()" style="font-size: 14px;font-weight:100;">
+                  <span class=" text-primary">
+                    <span class="fa-stack">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-plus fa-stack-1x" style="color:white"></i>
+                    </span> Add Configuration </span>
+                </button>
+              </span> -->
+            </h3>
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <th>
+                    <div class="zero-margin-vertical">
+                        <input type="text" class="form-control comp-table-cell-input" id="config.key" name="config.key" [(ngModel)]="key" placeholder="Enter Key">
+                    </div>
+                  </th>
+                  <th>
+                    <div class="form-group required zero-margin-vertical">
+                        <input type="text" class="form-control comp-table-cell-input" id="config.value" name="config.value" [(ngModel)]="value" placeholder="Enter Value">
+                    </div>
+                  </th>
+                  <th>
+                      <span>
+                          <button class="pull-right astext" (click)="addConfiguration()" style="font-size: 14px;font-weight:100;">
+                            <span class=" text-primary">
+                              <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-plus fa-stack-1x" style="color:white"></i>
+                              </span> Add Configuration </span>
+                          </button>
+                        </span>
+                  </th>
+                </tr>
+                <!-- <tr *ngFor="let config of keyValues; let i = index" class="component-table-row">
+                  <td class="comp-table-cell">
+                    <input type="text" class="form-control comp-table-cell-input" [id]="'config.key.'+i" [name]="'config.key.'+i" [(ngModel)]="config[0]" placeholder="Enter Key">
+                  </td>
+                  <td class="comp-table-cell">
+                    <input type="text" class="form-control comp-table-cell-input" [id]="'config.value.'+i" [name]="'config.value.'+i" [(ngModel)]="config[1]" placeholder="Enter Value">
+                  </td>
+                  <td class="comp-table-remove-icon" (click)="removeConfiguration(i)">
+                    <i class="fa fa-trash"></i>
+                  </td>
+                </tr> -->
+                <!-- <tr *ngFor="let config of configurations.keys(); let i = index" class="component-table-row">
+                    <td class="comp-table-cell">
+                      {{config}}            
+                    </td>
+                    <td class="comp-table-cell">
+                      {{configurations.get(config)}}
+                    </td>
+                    <td class="comp-table-remove-icon" (click)="editConfiguration(config)">
+                        <i class="fa fa-edit"></i>
+                      </td>
+                    <td class="comp-table-remove-icon" (click)="removeConfiguration(config)">
+                      <i class="fa fa-trash"></i>
+                    </td>
+                  </tr> -->
+              </table>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="ms-container">
+  <h4>Users List</h4>
+  <button class="pull-right" (click)="createUser()">Create User</button>&nbsp;
+  <button class="pull-right" (click)="getUser()">Fetch User</button>
+  <div *ngIf="user">
+    {{user.id}}
+    <table class="table table-striped">
+      <tr class="row">
+        <th class="col-md-2">
+          <strong>Key</strong>
+        </th>
+        <th class="col-md-8">
+            <strong>Value</strong>
+        </th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let detail of user.details | mapToIterable; let i = index" class="row">
+          <td class="col-md-2">
+            {{detail.key}}            
+          </td>
+          <td class="col-md-8">
+            {{detail.value}}
+          </td>
+          <td class="col-md-2">
+            <span class="comp-table-remove-icon" (click)="editDetail(detail.key)">
+              <i class="fa fa-edit"></i>
+            </span>&nbsp; &nbsp;
+            <span class="comp-table-remove-icon" (click)="removeConfiguration(config)">
+              <i class="fa fa-trash"></i>
+            </span>
+          </td>
+        </tr>
+        <tr class="row">
+            <td>
+                <div class="zero-margin-vertical">
+                    <input type="text" class="form-control" id="configKey" name="config.key" [(ngModel)]="key" placeholder="Enter Key" #configKey>
+                </div>
+            </td>
+            <td>
+                <div class="zero-margin-vertical">
+                    <input type="text" class="form-control" id="configValue" name="config.value" [(ngModel)]="value" placeholder="Enter Value" #configValue>
+                </div>
+            </td>
+            <td [hidden]="editConfigFlag">
+                <button class="btn btn-sm btn-primary" (click)="addDetail()" [disabled]="!key || !value">Add Configuration
+                </button>
+            </td>
+            <td [hidden]="!editConfigFlag">
+                <button class="btn btn-sm btn-primary" (click)="addDetail()">Update
+                </button>&nbsp;
+                <button class="btn btn-sm btn-primary" (click)="hideEditConfig();clearInputs();" >Cancel
+                  </button>
+            </td><button (click)="display()">Display</button>
+          </tr>
+    </table>
+  </div><br><br>
+  <div class="row">
+    <div *ngFor="let user of users" class="col-md-2 mb-4">
+      <div class="card ms-card">
+        <img class="card-img-top" src={{user.avatar}} alt={{user.first_name}} style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+          <p class="card-text">Id: {{user.id}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.login-box {
+    background: #fff;
+    margin: 60px auto 40px;
+    padding: 40px;
+    box-shadow: 0 0 40px #e3e3e3;
+    border-radius: 5px;
+    transform-origin: 0 0;
+    animation: swing-in .15s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 350px;
+    height: 300px;
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 10%;
+}

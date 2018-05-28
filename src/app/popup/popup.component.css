@@ -1,0 +1,11 @@
+.modal-dialog {
+    top: 4rem;
+}
+
+.modal-header, .modal-footer  {
+    padding: .5rem;
+}
+
+.modal-header {
+    background: darkcyan;
+}
