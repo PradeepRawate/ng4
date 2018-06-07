@@ -1,3 +1,88 @@
 .user-icon {
     font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+   padding: 0px 4rem 0px 4rem;
+}
+
+.dropdown-item {
+    padding: 4px 10px 4px 15px;
+    overflow: hidden;
+    color: #24292e;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.dropdown-header {
+    padding: 4px 10px 4px 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #099 !important;
+    color: white;
+}
+
+.dropdown-menu-sw {
+    right: -2px;
+    left: auto;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 180px;
+    margin-top: 8px;
+    z-index: 100;
+    width: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 7px;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+}
+
+.dropdown-divider {
+    height: 1px;
+    margin: 8px 1px;
+    background-color: #e1e4e8;
+}
+
+.dropdown-menu-sw::before {
+    top: -16px;
+    right: 9px;
+    left: auto;
+}
+.dropdown-menu::before {
+    border: 8px solid transparent;
+    border-bottom-color: rgba(27,31,35,0.15);
+}
+.dropdown-menu::before, .dropdown-menu::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+}
+
+.dropdown-menu-sw::after {
+    top: -14px;
+    right: 10px;
+    left: auto;
+}
+
+.dropdown-menu::after {
+    border: 7px solid transparent;
+    border-bottom-color: #fff;
+}
+.dropdown-menu::before, .dropdown-menu::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
 }

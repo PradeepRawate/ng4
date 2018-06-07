@@ -21,6 +21,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { PopupComponent } from './popup/popup.component';
 import { UtilityService } from './services/utility.service';
+import { AuthService } from './services/auth.service';
 import { MapToIterable } from './pipes/key-value.pipe';
 import { LoginComponent } from './login/login.component';
 import { Globals } from './services/global.service';
@@ -46,7 +47,7 @@ import { Globals } from './services/global.service';
     HttpClientModule,
     AppRouterModule
   ],
-  providers: [ LoaderService, ClientService, UserService, UserResolveService, UtilityService, Globals,
+  providers: [ LoaderService, ClientService, UserService, UserResolveService, UtilityService, AuthService, Globals,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true } ],
   bootstrap: [AppComponent]
 })

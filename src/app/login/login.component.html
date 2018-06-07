@@ -4,8 +4,8 @@
     <div class="">
         <form class="login-box">
             <h4 class="login-heading">Login to MyApp</h4>
-            <input type="text" class="form-control" placeholder="Email address" required autofocus><br>
-            <input type="password" class="form-control" placeholder="Password" required><br>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" [(ngModel)]="credentials.username" required autofocus><br>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="credentials.password" required><br>
             <button class="btn btn-lg btn-primary btn-block" (click)="login()">Sign in</button>
           </form>
     </div>
